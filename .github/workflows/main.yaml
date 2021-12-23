@@ -60,15 +60,15 @@ jobs:
     - name: Build container image
       run: |
         cd ./backend
-        docker build -t $ORGANIZATION/$FRONTEND_PROJECT_NAME .
+        docker build -t $ORGANIZATION/$BACKEND_PROJECT_NAME .
 
     - name: Push image to ghcr
       run: |
         VERSION=${GITHUB_REF#"refs/tags/"}
         
-        docker tag $ORGANIZATION/$FRONTEND_PROJECT_NAME ghcr.io/$ORGANIZATION/$FRONTEND_PROJECT_NAME:$VERSION
+        docker tag $ORGANIZATION/$BACKEND_PROJECT_NAME ghcr.io/$ORGANIZATION/$BACKEND_PROJECT_NAME:$VERSION
         
-        docker push ghcr.io/$ORGANIZATION/$FRONTEND_PROJECT_NAME:$VERSION
+        docker push ghcr.io/$ORGANIZATION/$BACKEND_PROJECT_NAME:$VERSION
 
   # push_version_frontend:
   #   name: Push container
