@@ -76,7 +76,7 @@ jobs:
         docker push ghcr.io/${{ env.ORGANIZATION }}/${{ env.BACKEND_PROJECT_NAME }}:latest
 
   push_version_frontend:
-    name: Push backend container
+    name: Push frontend container
     runs-on: ubuntu-latest
     needs: frontend
     steps:
