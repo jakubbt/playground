@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: sample-app-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3010:3010
