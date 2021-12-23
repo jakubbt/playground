@@ -59,7 +59,7 @@ jobs:
 
     - name: Build container image
       run: |
-        cd ./frontend
+        cd ./backend
         docker build -t $ORGANIZATION/$FRONTEND_PROJECT_NAME .
 
     - name: Push image to ghcr
