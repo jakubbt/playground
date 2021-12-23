@@ -66,7 +66,7 @@ jobs:
       run: |
         docker tag ${{ env.ORGANIZATION }}/${{ env.BACKEND_PROJECT_NAME }} ghcr.io/$ORGANIZATION/${{ env.BACKEND_PROJECT_NAME }}:latest
         
-        docker push ghcr.io/${{ env.ORGANIZATION }}/${{ env.BACKEND_PROJECT_NAME }}:$VERSION
+        docker push ghcr.io/${{ env.ORGANIZATION }}/${{ env.BACKEND_PROJECT_NAME }}:latest
 
   # push_version_frontend:
   #   name: Push container
