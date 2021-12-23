@@ -64,9 +64,7 @@ jobs:
 
     - name: Push image to ghcr
       run: |
-        VERSION=${GITHUB_REF#"refs/tags/"}
-        
-        docker tag $ORGANIZATION/$BACKEND_PROJECT_NAME ghcr.io/$ORGANIZATION/$BACKEND_PROJECT_NAME:$VERSION
+        docker tag $ORGANIZATION/$BACKEND_PROJECT_NAME ghcr.io/$ORGANIZATION/$BACKEND_PROJECT_NAME:latest
         
         docker push ghcr.io/$ORGANIZATION/$BACKEND_PROJECT_NAME:$VERSION
 
