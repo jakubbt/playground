@@ -2,9 +2,14 @@
   text-align: center;
 }
 
+.images {
+  margin-bottom: 30px;
+}
+
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
+  margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
