@@ -10,8 +10,10 @@ function App() {
   const [me, setMe] = useState({ name: '', bio: '', link: '' })
 
   useEffect(() => {
-    axios.get('http://localhost:3010/genius').then(res => setMe(res.data))
+    axios.get('/genius').then(res => setMe(res.data))
   }, [])
+
+  const version = Math.floor(Math.random() * 1000)
 
   return (
     <div className='App'>
@@ -23,11 +25,12 @@ function App() {
         <img src={nginx} className='App-logo' alt='logo' />
       </div>
         <p>Sample React app using docker, k8s and only God knows what else</p>
+        <p>Version: 1.0.{version} - try refreshing, there should be 4 pods ❤️</p>
         <h3 style={{ marginBottom: 20, marginTop: 0, paddingBottom: 0 }}>By</h3>
-        <h4 style={{ marginBottom: 10, marginTop: 0, paddingBottom: 0 }}>
+        <h4 style={{ marginBottom: 10, marginTop: 0, paddingBottom: 0, color: 'green' }}>
           {me.name}
         </h4>
-        <h5 style={{ marginBottom: 10, marginTop: 0, paddingBottom: 0 }}>
+        <h5 style={{ marginBottom: 10, marginTop: 0, paddingBottom: 0, color: 'green' }}>
           {me.bio}
         </h5>
         <code>
@@ -40,6 +43,7 @@ function App() {
             -- github --
           </a>
         </code>
+        <code style={{ fontSize: 14 }}>Green text color is from api, if there is none, sorry. 😭</code>
       </header>
     </div>
   )
