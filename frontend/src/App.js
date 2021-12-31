@@ -10,7 +10,7 @@ function App() {
   const [me, setMe] = useState({ name: '', bio: '', link: '' })
 
   useEffect(() => {
-    axios.get('/genius').then(res => setMe(res.data))
+    axios.get('/api/genius').then(res => setMe(res.data))
   }, [])
 
   const version = Math.floor(Math.random() * 1000)
