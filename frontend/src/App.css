@@ -3,13 +3,19 @@
 }
 
 .images {
+  margin-top: 30px;
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .App-logo {
-  height: 30vmin;
+  height: 200px;
   pointer-events: none;
   margin: 10px;
+  margin-bottom: 40px;
+  width: calc((100% / 3) - 20px);
+  object-fit: contain;
 }
 
 @media (prefers-reduced-motion: no-preference) {
