@@ -35,7 +35,7 @@ First of all, I need to thank to my friend, unvoluntary mentor and the greatest 
 2. Set subscription which should be used `az account set --subscription "<subscription_id_or_subscription_name>"`
 3. Create service principal `az ad sp create-for-rbac --name <service_principal_name>`
  - this will return credentials which are available only after this command, you cannot get back to them later, so save them to safe place
- - use credentials in `terraform.aut.tfvars`
+ - use credentials in `terraform.auto.tfvars`
 4. Create ssh key pair if you don't have one
 5. In terraform directory run `terraform init`
 6. Run `terraform plan` to see changes which are going to be applied
