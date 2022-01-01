@@ -7,6 +7,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+const version = Math.floor(Math.random() * 1000)
+
 app.get('/', (req, res) => {
   res.send('Just kidding')
 })
@@ -17,6 +19,10 @@ app.get('/genius', (req, res) => {
     bio: 'Unknown waters enthusiast',
     link: 'https://github.com/jakubbt'
   })
+})
+
+app.get('/version', (req, res) => {
+  res.send(JSON.stringify(version))
 })
 
 app.listen('3010', () => {

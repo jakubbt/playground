@@ -10,12 +10,13 @@ import axios from 'axios'
 
 function App() {
   const [me, setMe] = useState({ name: '', bio: '', link: '' })
+  const [v, setV] = useState(0)
 
   useEffect(() => {
     axios.get('/api/genius').then(res => setMe(res.data))
+    axios.get('/api/version').then(res => setV(res.data))
   }, [])
 
-  const version = Math.floor(Math.random() * 1000)
 
   return (
     <div className='App'>
@@ -29,7 +30,7 @@ function App() {
         <img src={nginx} className='App-logo' alt='logo' />
       </div>
         <p>Sample React app using docker, k8s, terraform and only God knows what else</p>
-        <p>Version: 1.0.{version} - try refreshing, there should be 4 pods ❤️</p>
+        <p>Version: 1.0.{v} - try refreshing, there should be 4 pods ❤️</p>
         <h3 style={{ marginBottom: 20, marginTop: 0, paddingBottom: 0 }}>By</h3>
         <h4 style={{ marginBottom: 10, marginTop: 0, paddingBottom: 0, color: 'green' }}>
           {me.name}
