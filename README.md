@@ -6,11 +6,6 @@
 
 The purpose of this app is to run only 🏃‍♂️
 
-## Inscription
-
-First of all, I need to thank to my friend, unvoluntary mentor and the greatest CTO of all times [Juffalow](https://github.com/juffalow) for starting all this mess in my head. Thank you, stay awesome! 🥳
-*Don't forget to visit him and give him some ⭐️.*
-
 ## Let's start
 
 ### What we need?
