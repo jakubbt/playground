@@ -34,6 +34,6 @@ The purpose of this app is to run only 🏃‍♂️
 4. Create ssh key pair if you don't have one
 5. In terraform directory run `terraform init`
 6. Run `terraform plan` to see changes which are going to be applied
-7. Run `erraform apply` to apply changes
+7. Run `terraform apply` to apply changes
 
 This will create **resource group (test-aks) -> kubernetes cluster (test) -> secret for images -> deployments (frontend + backend) -> services -> ingress nginx controller**, and you will be able to use external ip of ccontroller service from azure portal.
