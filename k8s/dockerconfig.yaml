@@ -6,4 +6,4 @@ metadata:
   labels:
     app: sample-fullstack-app
 data:
-  .dockerconfigjson: eyJhdXRocyI6eyJnaGNyLmlvIjp7ImF1dGgiOiJhbUZyZFdKaWREcG5hSEJmYVROTVNERllOVkJLVWpOV04yRjNNV1pLTlcxM1lrTktjM2QyUXpKc01XUmtXR0pJIn19fQ==
+  .dockerconfigjson: yourcey
